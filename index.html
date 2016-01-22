@@ -1,44 +1,116 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Catastro by GeoinquietosSevilla</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
+<head>
+  <meta charset='utf-8' />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="description" content="Taller Importación Catastral - OSM" />
+  <!--<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">-->
+  <meta name="author" content="Moisés Arcos Santiago">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="revealjs/css/reveal.css">
+  <link rel="stylesheet" href="revealjs/css/theme/beige.css" id="theme">
+
+  <!-- For syntax highlighting -->
+  <!--<link rel="stylesheet" href="lib/css/zenburn.css">-->
+
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+    document.write( '<link rel="stylesheet" href="revealjs/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
+
+    <title>Importación Catastro - OSM</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Catastro</h1>
-        <p>Tutorial Importación a OSM de Catastro</p>
-
-        <p class="view"><a href="https://github.com/GeoinquietosSevilla/catastro">View the Project on GitHub <small>GeoinquietosSevilla/catastro</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/GeoinquietosSevilla/catastro/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/GeoinquietosSevilla/catastro/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/GeoinquietosSevilla/catastro">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="tutorial-importación-a-osm-de-catastro" class="anchor" href="#tutorial-importaci%C3%B3n-a-osm-de-catastro" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tutorial Importación a OSM de Catastro</h1>
-
-<p>En este tutorial se realizará una demostración del proceso a realizar para importar los datos liberados por Catastro al formato libre OpenStreetMap. Para ello recorreremos todos los pasos: desde el uso del certificado digital para obtener los datos de Catastro, pasando por el uso de la herramienta cat2osm, hasta los modificaciones necesarias para su publicación en la Base de Datos de OSM.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/GeoinquietosSevilla">GeoinquietosSevilla</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+    <!-- Reaveal Section -->
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section data-background="images/background_image.png">
+            <h1>Taller de Importación de Catastro a OpenStreetMap</h1>
+            <h3>
+              <a href="http://sevilla.geoinquietos.org">Geoinquietos&nbsp;Sevilla</a>
+            </h3>
+          </section>
+          <section>
+            <h1>
+              <span>¿Geoinquietos Sevilla?</span>
+            </h1>
+            <div>
+              <ul>
+                <li>Encuentros locales informales</li>
+                <li>Compartimos conocimientos</li>
+                <li>Organizamos charlas</li>
+                <li>Divulgamos Software Libre</li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h1>
+              <span>¿Dónde encontrarnos?</span>
+            </h1>
+            <div>
+              <ul>
+                <li>Lista de correo</li>
+                <p>http://lists.osgeo.org/mailman/listinfo/sevilla</p>
+                <li>Wiki</li>
+                <p>sevilla.geoinquietos.org</p>
+                <li>Blog</li>
+                <p>http://geoinquietos.blogspot.com.es</p>
+                <li>Twitter</li>
+                <p>@geoinquietossvq</p>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section>
+          <h2>Agradecimientos</h2>
+          <h3>Gracias por vuestra atención</h3>
+        </section>
+        <section>
+          <h2>Licencia</h2>
+          <img src="http://www.webislam.com/libs/timthumb.php?src=/media/2013/03/56559_cc-by-sa_big.png&amp;w=300" style="width: 596.9540779159607px; height: 207.4198472772846px; max-height: none; max-width: none;"><br>
+          <span>CC-BY-SA</span>
+        </section>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+    <!-- Script Reveal.js -->
+    <script src="revealjs/lib/js/head.min.js"></script>
+    <script src="revealjs/js/reveal.js"></script>
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+        { src: 'revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
   </body>
 </html>
