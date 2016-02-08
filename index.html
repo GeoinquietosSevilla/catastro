@@ -12,6 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="revealjs/css/reveal.css">
   <link rel="stylesheet" href="revealjs/css/theme/beige.css" id="theme">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/catastro.css">
 
   <!-- For syntax highlighting -->
@@ -32,8 +33,10 @@
   <body>
     <!-- Reaveal Section -->
     <div class="reveal">
+    <header class="header"></header>
       <div class="slides">
-        <section>
+        <section data-state="header0">
+          <style>.header0 header {display: none;}</style>
           <section data-background="images/background_image.png">
             <h1>Taller de Importación de Catastro a OpenStreetMap</h1>
             <h3>
@@ -71,7 +74,7 @@
             </div>
           </section>
         </section>
-        <section>
+        <section data-state="header0">
           <h1>
             <span>Vamos a aprender</span>
           </h1>
@@ -84,26 +87,58 @@
           </div>
         </section>
         <section>
-          <section>
+          <section data-state="header0">
             <h2>¿Que es catastro?</h2>
           </section>
-          <section>
+          <section data-state="header0">
             <span>«El Catastro inmobiliario de España es un registro administrativo en el que se describen los bienes inmuebles urbanos, rústicos y las alteraciones de sus características. La inscripción en el mismo es obligatoria y gratuita.»</span>
             <a href="http://www.sedecatastro.gob.es/" target="_blank">http://www.sedecatastro.gob.es/</a>
           </section>
-          <section data-background="images/sede_catastro.png"></section>
-          <section data-background="images/ejes_catastro.png">
-            <div class="cadastre_title">
-              <h2 class="muni">Alanis</h2>
-              <h3 class="prov">Provincia de Sevilla</h3>
-            </div>
+          <section data-state="header0" data-background="images/sede_catastro.png">
+            <style>.header0 header {display: none;}</style>
+          </section>
+          <section data-state="header1" data-background="images/alanis_bing.png">
+            <style>.header1 header:after { content: "Alanis - Provincia de Sevilla"; }</style>
+          </section>
+          <section data-state="header2" data-background="images/alanis_bing_osm.png">
+            <style>.header2 header:after { content: "Alanis en OpenStreetMap"; }</style>
+          </section>
+          <section data-state="header3" data-background="images/alanis_bing_osm_catastro.png">
+            <style>.header3 header:after { content: "Alanis en Catastro"; }</style>
+          </section>
+          <section data-state="header4" data-background="images/alanis_catastro_detallado.png">
+            <style>.header4 header:after { content: "Alanis al detalle en Catastro"; }</style>
           </section>
         </section>
-        <section>
+        <section data-state="header0">
           <h2>¿Que es cat2osm2?</h2>
         </section>
         <section>
-          <h2>¿Como realizamos una importacion?</h2>
+          <section data-state="header0">
+            <h2>¿Como realizamos una importacion?</h2>
+          </section>
+          <section data-state="header0">
+            <h3>Descarga masiva de Catastro</h3>
+            <h3>Preparar los datos</h3>
+            <h3>Ejecutar cat2osm2</h3>
+            <h3>Revisar errores</h3>
+            <h3>Subir a OSM</h3>
+          </section>
+        </section>
+        <section>
+          <section data-state="header0">
+            <h2>Descarga masiva de Catastro</h2>
+            <p><i class="fa fa-file-archive-o"> Shapefiles urbanos (Sin historico)</i></p>
+            <p><i class="fa fa-file-archive-o"> Shapefiles rusticos (Sin historico)</i></p>
+            <p><i class="fa fa-file-archive-o"> Alfanumerico urbano (Sin historico)</i></p>
+            <p><i class="fa fa-file-archive-o"> Alfanumerico rustico (Sin historico)</i></p>
+          </section>
+          <section data-state="header0">
+            <h2>Preparar los datos</h2>
+            <p><i class="fa fa-folder-open"> Arbol de directorios</i></p>
+            <p><i class="fa fa-folder"> XX_XXX_UA_aaaa-mm-dd_SHF</i></p>
+            <p><i class="fa fa-folder"> XX_XXX_RA_aaaa-mm-dd_SHF</i></p>
+          </section>
         </section>
         <section>
           <h2>Agradecimientos</h2>
