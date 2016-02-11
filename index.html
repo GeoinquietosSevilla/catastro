@@ -118,37 +118,110 @@
             <h2>¿Como realizamos una importacion?</h2>
           </section>
           <section data-state="header0">
-            <h3>Descarga masiva de Catastro</h3>
-            <h3>Preparar los datos</h3>
+            <h2>Requisitos previos</h2>
+            <h3><a href="https://www.sede.fnmt.gob.es/certificados/persona-fisica/obtener-certificado-software">Certificado digital</a></h3>
+            <h3><a href="https://josm.openstreetmap.de/"> Tener instalado JOSM</a></h3>
+            <h3><a href="http://wiki.openstreetmap.org/wiki/ES:Cat2Osm2#Descarga_del_programa_Cat2Osm2">Tener descargado cat2osm2</a></h3>
+          </section>
+          <section data-state="header0">
+            <h2>Pasos a seguir</h2>
+            <h3>Elegir un municipio</h3>
+            <h3>Descargar sus datos de Catastro</h3>
+            <h3>Preparar el entorno</h3>
             <h3>Ejecutar cat2osm2</h3>
-            <h3>Revisar errores</h3>
+            <h3>Revisar los errores con JOSM</h3>
             <h3>Subir a OSM</h3>
           </section>
-        </section>
-        <section>
           <section data-state="header0">
-            <h2>Descarga masiva de Catastro</h2>
-            <p><i class="fa fa-file-archive-o"> Shapefiles urbanos (Sin historico)</i></p>
-            <p><i class="fa fa-file-archive-o"> Shapefiles rusticos (Sin historico)</i></p>
-            <p><i class="fa fa-file-archive-o"> Alfanumerico urbano (Sin historico)</i></p>
-            <p><i class="fa fa-file-archive-o"> Alfanumerico rustico (Sin historico)</i></p>
+            <h2>Elegir un municipio</h2>
+            <h3>Simplemente pensar en uno</h3>
+            <h3>Tener contacto con el pueblo</h3>
           </section>
           <section data-state="header0">
-            <h2>Preparar los datos</h2>
-            <p><i class="fa fa-folder-open"> Arbol de directorios</i></p>
-            <p><i class="fa fa-folder"> XX_XXX_UA_aaaa-mm-dd_SHF</i></p>
-            <p><i class="fa fa-folder"> XX_XXX_RA_aaaa-mm-dd_SHF</i></p>
+            <h2>Descargar datos de Catastro</h2>
+            <p>Acceder a la sede electrónica de <a href="http://www1.sedecatastro.gob.es/">Catastro</a>, por el apartado "Consulta y descarga masiva de datos"</p>
+            <img src="http://wiki.openstreetmap.org/w/images/b/b7/Catastro1.png">
+          </section>
+          <section data-state="header0">
+            <h2>Descargar datos de Catastro</h2>
+            <p>Descargar informacion alfanumerica (formato CAT)</p>
+            <p>Descarga de cartografía vectorial (formato Shapefile)</p>
+            <img src="http://wiki.openstreetmap.org/w/images/d/d7/Descarga_catastro.png">
+          </section>
+          <section data-state="header0">
+            <h2>Descargar datos de Catastro</h2>
+            <p>En la ventana de descargas, después de seleccionar provincia y municipio, se debe pulsar el botón "Ver capas disponibles" y a continuación en "Marcar todas"</p>
+            <img src="http://wiki.openstreetmap.org/w/images/a/ab/Seleccion_shapefile_catastro.png">
+          </section>
+          <section data-state="header0">
+            <h2>Descargar datos de Catastro</h2>
+            <p>Los archivos que nos habremos descargados al final del proceso seran:</p>
+            <ul>
+              <p><i class="fa fa-file-archive-o"> Alfanumerico urbano (Sin historico)</i></p>
+              <p><i class="fa fa-file-archive-o"> Alfanumerico rustico (Sin historico)</i></p>
+              <p><i class="fa fa-file-archive-o"> Shapefiles urbanos (Sin historico)</i></p>
+              <p><i class="fa fa-file-archive-o"> Shapefiles rusticos (Sin historico)</i></p>
+            </ul>
+          </section>
+          <section data-state="header0">
+            <h2>Preparar el entorno</h2>
+            <ul>
+              <p><i class="fa fa-folder-open"> Catastro</i></p>
+              <p><i class="fa fa-file-archive-o"> XX_XXX_UA_XXXX-XX-XX_SHF.zip</i></p>
+              <p><i class="fa fa-file-archive-o"> XX_XXX_RA_XXXX-XX-XX_SHF.zip</i></p>
+              <p><i class="fa fa-file-archive-o"> XX_XXX_U_XXXX-XX-XX.CAT.gz</i></p>
+              <p><i class="fa fa-file-archive-o"> XX_XXX_R_XXXX-XX-XX.CAT.gz</i></p>
+            </ul>
+          </section>
+          <section data-state="header0">
+            <h2>Ejecutar cat2osm2</h2>
+            <p>Para ejecutar el cat2osm2 debemos ir a su ubicación en el Terminal y ejecutarlo indicando ruta donde encontrar esos 4 archivos necesarios</p>
+            <code>$java -jar cat2osm2.jar RutaDirectorioConLos4Archivos -3d 1</code>
+          </section>
+          <section data-state="header0">
+            <h2>Ejecutar cat2osm2</h2>
+            <p>Los resultados se exportan en 3 carpetas distintas + una archivo global en el que se han unido todos los archivos exportados</p>
+            <ul>
+              <p><i class="fa fa-folder"> masas --> masas urbanas y rusticas</i></p>
+              <p><i class="fa fa-folder"> ejes --> ejes separados por nombre</i></p>
+              <p><i class="fa fa-folder"> elementos --> lineas, puntos y textos</i>
+              <ul>
+                <li>Elemlin: lineas electricas ...</li>
+                <li>Elempun: arboles, farolas ...</li>
+                <li>Elemtex: nombre de municipios, provincias ...</li>
+              </ul>
+            </ul>
+          </section>
+          <section data-state="header0">
+            <h2>Revisar los errores con JOSM</h2>
+            <p>Los errores más comunes que pueden existir en los datos</p>
+            <ul>
+              <p><i class="fa fa-times"> Edificio dentro de un edificio</i></p>
+              <p><i class="fa fa-times"> FIXME</i></p>
+              <p><i class="fa fa-times"> Error "Intersección entre vías multipolígono"</i></p>
+            </ul>
+            <p><a href="http://wiki.openstreetmap.org/wiki/ES:Cat2Osm2#Errores_a_solucionar">Mas errores</a></p>
+            <p><a href="http://wiki.openstreetmap.org/wiki/Limpieza_y_normalizaci%C3%B3n_de_datos_catastrales">Limpieza y normalizacion de los datos</a></p>
+          </section>
+          <section data-state="header0">
+            <h2>Subir a OSM</h2>
+            <p>Todo lo que se haya generado con cat2osm2 debe pasar por el responsable de la provincia donde se encuentre el municipio seleccionado.</p>
+            <p>Le enviaremos el fichero osm corregido para que le pase el validador de JOSM antes de subirlo</p>
+            <p>Sera el responsable el encargado de subir la informacion</p>
           </section>
         </section>
-        <section>
+        <section data-state="header0">
+          <h2>Enlaces de interes:</h2>
+          <ul>
+            <p><a href="http://wiki.openstreetmap.org/wiki/ES:Cat2Osm2">Pagina de cat2osm2 en la wiki de OSM</a></p>
+            <p><a href="http://wiki.openstreetmap.org/wiki/Minitutorial_para_cat2osm_Avila">Minitutorial para Avila</a></p>
+          </ul>
+        </section>
+        <section data-state="header0">
           <h2>Agradecimientos</h2>
           <h3>Gracias por vuestra atención</h3>
         </section>
-        <section>
-          <h2>Agradecimientos</h2>
-          <h3>Gracias por vuestra atención</h3>
-        </section>
-        <section>
+        <section data-state="header0">
           <h2>Licencia</h2>
           <img src="http://www.webislam.com/libs/timthumb.php?src=/media/2013/03/56559_cc-by-sa_big.png&amp;w=300" style="width: 596.9540779159607px; height: 207.4198472772846px; max-height: none; max-width: none;"><br>
           <span>CC-BY-SA</span>
